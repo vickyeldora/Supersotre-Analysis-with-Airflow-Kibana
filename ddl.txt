@@ -1,0 +1,37 @@
+-- Pembuatan table dengan nama table_m3
+CREATE TABLE table_m3 (
+    id SERIAL PRIMARY KEY,
+    "Year_Birth" INT,
+    "Education" VARCHAR,
+    "Marital_Status" VARCHAR,
+    "Income" INT,
+    "Kidhome" INT,
+    "Teenhome" INT,
+    "Dt_Customer" DATE,
+    "Recency" INT,
+    "MntWines" INT,
+    "MntFruits" INT,
+    "MntMeatProducts" INT,
+    "MntFishProducts" INT,
+    "MntSweetProducts" INT,
+    "MntGoldProds" INT,
+    "NumDealsPurchases" INT,
+    "NumWebPurchases" INT,
+    "NumCatalogPurchases" INT,
+    "NumStorePurchases" INT,
+    "NumWebVisitsMonth" INT,
+    "Response" INT,
+	"Complain" INT 
+);
+
+-- Melihat tabel yang sudah dibuat
+SELECT * FROM table_m3
+
+-- Pengisian value table_m3
+COPY table_m3
+FROM 'C:\Program Files\PostgreSQL\16\P2M3_vicky_eldora_data_raw.csv'
+DELIMITER ','
+CSV HEADER;
+
+-- Melihat isi tabel
+SELECT * FROM table_m3
